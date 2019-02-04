@@ -18,7 +18,7 @@ class Clock extends Component {
         return (
             <React.Fragment>
                 <div className="time">
-                <p>Press here, to <a onClick={this.props.animate}>show</a> this animation</p>
+                <p>Press here, to <a onClick={!this.props.clock.isViewing ? this.props.animate : null}>show</a> this animation</p>
                 {clock.isViewing &&
                     <div>
                         { 5 - clock.seconds } left
