@@ -3,13 +3,7 @@ import rootReducer from './../reducers/index';
 import thunk from 'redux-thunk';
 import { redirect } from './../middlewares/redirect';
 
-let reduxDevtool = null;
-
-if (process.env['NODE_ENV'] !== 'production') {
-    reduxDevtool = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
-}
-
-const composeEnhancers = reduxDevtool || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // recommended to delete on prod
 
 const enhancer = composeEnhancers(
     applyMiddleware(thunk),
