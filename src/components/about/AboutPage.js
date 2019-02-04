@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoBack from './../../containers/partials/about/GoBack';
 
 class AboutPage extends Component {
     render() {
@@ -8,6 +9,7 @@ class AboutPage extends Component {
                 <h2>Base web project using React framework</h2>
                 <h3>#react, #redux, #react-router, #webpack, #babel, #express</h3>
                 <p>To start project, do <code>npm i</code> and then <code>npm run dev</code></p>
+                <GoBack />
                 <hr/>
                 <p>Ready to deploy on Heroku</p>
             </React.Fragment>

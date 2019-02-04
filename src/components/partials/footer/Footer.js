@@ -8,8 +8,7 @@ class Footer extends Component {
                 <div className="col mx-auto text-center">
                     <p className="credits">
                         Questions, related to the site, you can ask the author:<br/>
-                        <strong>Webmster:</strong> Arkadiy Krava 
-                        (<a target="_blank" rel="noopener noreferrer" id="github-link" href="https://github.com/akrava">akrava</a>
+                        <strong>Webmster:</strong> Arkadiy Krava <a target="_blank" rel="noopener noreferrer" id="github-link" href="https://github.com/akrava">akrava</a>
                     </p>
                     <span className="text-monospace">All rights reserved (c)</span>
                 </div>

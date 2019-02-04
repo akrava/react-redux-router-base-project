@@ -5,20 +5,15 @@ export const defaultPayload = {
     isViewing: false
 };
 
-export function showMessage() {
+export function showClock() {
     return (dispatch) => {
-        dispatch({
-            type: CLOCK_SHOW,
-            payload: {
-                isViewing: true
-            }
-        });
-    
-        setTimeout(() => {
-            dispatch({
-                type: CLOCK_HIDE,
-                payload: { isViewing: false }
-            });
-        }, 5000);
+        for (let i = 0; i <= 5; i++) {
+            setTimeout(() => {
+                dispatch({
+                    type: CLOCK_SHOW,
+                    payload: { seconds: i, isViewing: i !== 5 }
+                });
+            }, i * 1000);
+        }
     };
 }

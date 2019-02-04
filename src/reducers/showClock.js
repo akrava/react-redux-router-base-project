@@ -4,12 +4,13 @@ const initialState = {
     ...defaultPayload
 };
   
-function messageReducer(state = initialState, action) {
+function clockReducer(state = initialState, action) {
     const data = action.payload;
     switch (action.type) {
         case CLOCK_SHOW: {
             return {
                 ...state,
+                seconds: data.seconds,
                 isViewing: data.isViewing
             };
         }
@@ -25,4 +26,4 @@ function messageReducer(state = initialState, action) {
     }
 }
 
-export default messageReducer;
+export default clockReducer;
